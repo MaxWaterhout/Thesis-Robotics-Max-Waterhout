@@ -1,0 +1,22 @@
+{
+  "0": [{"bbox_obj": [169, 326, 23, 38], "bbox_visib": [169, 326, 23, 38], "px_count_all": 656, "px_count_valid": 656, "px_count_visib": 653, "visib_fract": 0.9954268292682927}],
+  "1": [{"bbox_obj": [229, 160, 14, 23], "bbox_visib": [229, 160, 14, 23], "px_count_all": 278, "px_count_valid": 278, "px_count_visib": 278, "visib_fract": 1.0}],
+  "2": [{"bbox_obj": [449, 285, 22, 14], "bbox_visib": [449, 285, 22, 14], "px_count_all": 268, "px_count_valid": 268, "px_count_visib": 265, "visib_fract": 0.9888059701492538}],
+  "3": [{"bbox_obj": [170, 177, 24, 20], "bbox_visib": [170, 177, 24, 20], "px_count_all": 351, "px_count_valid": 351, "px_count_visib": 351, "visib_fract": 1.0}],
+  "4": [{"bbox_obj": [417, 204, 13, 26], "bbox_visib": [417, 204, 9, 16], "px_count_all": 218, "px_count_valid": 218, "px_count_visib": 88, "visib_fract": 0.4036697247706422}],
+  "5": [{"bbox_obj": [207, 238, 12, 26], "bbox_visib": [207, 238, 12, 26], "px_count_all": 278, "px_count_valid": 278, "px_count_visib": 278, "visib_fract": 1.0}],
+  "6": [{"bbox_obj": [463, 204, 23, 22], "bbox_visib": [463, 204, 23, 22], "px_count_all": 337, "px_count_valid": 337, "px_count_visib": 333, "visib_fract": 0.9881305637982196}],
+  "7": [{"bbox_obj": [429, 288, 26, 22], "bbox_visib": [429, 288, 26, 22], "px_count_all": 297, "px_count_valid": 297, "px_count_visib": 297, "visib_fract": 1.0}],
+  "8": [{"bbox_obj": [312, 397, 18, 18], "bbox_visib": [312, 397, 18, 18], "px_count_all": 294, "px_count_valid": 294, "px_count_visib": 292, "visib_fract": 0.9931972789115646}],
+  "9": [{"bbox_obj": [421, 407, 33, 23], "bbox_visib": [421, 407, 33, 23], "px_count_all": 609, "px_count_valid": 609, "px_count_visib": 609, "visib_fract": 1.0}],
+  "10": [{"bbox_obj": [227, 217, 20, 28], "bbox_visib": [227, 217, 20, 24], "px_count_all": 362, "px_count_valid": 362, "px_count_visib": 140, "visib_fract": 0.3867403314917127}],
+  "11": [{"bbox_obj": [464, 345, 25, 29], "bbox_visib": [464, 345, 25, 29], "px_count_all": 537, "px_count_valid": 537, "px_count_visib": 537, "visib_fract": 1.0}],
+  "12": [{"bbox_obj": [198, 342, 21, 15], "bbox_visib": [198, 342, 21, 15], "px_count_all": 266, "px_count_valid": 266, "px_count_visib": 266, "visib_fract": 1.0}],
+  "13": [{"bbox_obj": [-1, -1, -1, -1], "bbox_visib": [-1, -1, -1, -1], "px_count_all": 224, "px_count_valid": 224, "px_count_visib": 0, "visib_fract": 0.0}],
+  "14": [{"bbox_obj": [199, 338, 20, 19], "bbox_visib": [199, 338, 20, 19], "px_count_all": 296, "px_count_valid": 296, "px_count_visib": 296, "visib_fract": 1.0}],
+  "15": [{"bbox_obj": [365, 381, 15, 16], "bbox_visib": [365, 381, 15, 16], "px_count_all": 203, "px_count_valid": 203, "px_count_visib": 193, "visib_fract": 0.9507389162561576}],
+  "16": [{"bbox_obj": [180, 442, 44, 35], "bbox_visib": [180, 442, 44, 35], "px_count_all": 1104, "px_count_valid": 1104, "px_count_visib": 1104, "visib_fract": 1.0}],
+  "17": [{"bbox_obj": [177, 212, 16, 19], "bbox_visib": [177, 212, 16, 19], "px_count_all": 220, "px_count_valid": 220, "px_count_visib": 220, "visib_fract": 1.0}],
+  "18": [{"bbox_obj": [114, 392, 33, 26], "bbox_visib": [114, 392, 33, 26], "px_count_all": 653, "px_count_valid": 653, "px_count_visib": 640, "visib_fract": 0.9800918836140888}],
+  "19": [{"bbox_obj": [47, 251, 34, 54], "bbox_visib": [47, 251, 34, 54], "px_count_all": 1477, "px_count_valid": 1477, "px_count_visib": 1476, "visib_fract": 0.999322951929587}]
+}
