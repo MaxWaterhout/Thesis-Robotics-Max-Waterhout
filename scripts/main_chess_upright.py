@@ -4,25 +4,36 @@ import os
 import numpy as np
 import random
 import bpy
+import time 
+
+start = time.time()
 
 parser = argparse.ArgumentParser()
 parser.add_argument('bop_parent_path', help="Path to the bop datasets parent directory")
-parser.add_argument('cc_textures_path', default="resources/cctextures", help="Path to downloaded cc textures")
+parser.add_argument('cc_textures_path', default="datasets/cctextures", help="Path to downloaded cc textures")
 parser.add_argument('output_dir', help="Path to where the final files will be saved ")
 parser.add_argument('--num_scenes', type=int, default=2000, help="How many scenes with 25 images each to generate")
 args = parser.parse_args()
 
 bproc.init()
 
-# load bop objects into the scene
-#target_bop_objs = bproc.loader.load_bop_objs(bop_dataset_path = os.path.join(args.bop_parent_path, 'lm'), mm2m = True)
+current_dir = os.getcwd()  # Get the current working directory
 
-rook = bproc.loader.load_obj("/home/max/Documents/blenderproc/datasets/models/chess/models/obj_000001.ply")[0]
-queen = bproc.loader.load_obj("/home/max/Documents/blenderproc/datasets/models/chess/models/obj_000002.ply")[0]
-pawn = bproc.loader.load_obj("/home/max/Documents/blenderproc/datasets/models/chess/models/obj_000003.ply")[0]
-king = bproc.loader.load_obj("/home/max/Documents/blenderproc/datasets/models/chess/models/obj_000004.ply")[0]
-horse = bproc.loader.load_obj("/home/max/Documents/blenderproc/datasets/models/chess/models/obj_000005.ply")[0]
-bishop = bproc.loader.load_obj("/home/max/Documents/blenderproc/datasets/models/chess/models/obj_000006.ply")[0]
+# Concatenate the current directory with the relative paths to the models
+rook_path = os.path.join(current_dir, "datasets/models/chess/models/obj_000001.ply")
+queen_path = os.path.join(current_dir, "datasets/models/chess/models/obj_000002.ply")
+pawn_path = os.path.join(current_dir, "datasets/models/chess/models/obj_000003.ply")
+king_path = os.path.join(current_dir, "datasets/models/chess/models/obj_000004.ply")
+horse_path = os.path.join(current_dir, "datasets/models/chess/models/obj_000005.ply")
+bishop_path = os.path.join(current_dir, "datasets/models/chess/models/obj_000006.ply")
+
+# Load the objects using the updated paths
+rook = bproc.loader.load_obj(rook_path)[0]
+queen = bproc.loader.load_obj(queen_path)[0]
+pawn = bproc.loader.load_obj(pawn_path)[0]
+king = bproc.loader.load_obj(king_path)[0]
+horse = bproc.loader.load_obj(horse_path)[0]
+bishop = bproc.loader.load_obj(bishop_path)[0]
 
 target_bop_objs = [rook,queen,pawn, king, horse, bishop]
 
@@ -94,7 +105,7 @@ def set_materials(obj):
     mat.set_principled_shader_value("Specular", np.random.uniform(0, 1.0))
     obj.hide(False)
 
-
+end = time.time()
 for i in range(args.num_scenes):
 
     # Sample bop objects for a scene
@@ -195,5 +206,10 @@ for i in range(args.num_scenes):
     
     for obj in (sampled_target_bop_objs + sampled_distractor_bop_objs):      
         obj.hide(True)
+
+end_end = time.time()
+print(round(end-start),'loading seconds')
+print(round(end_end-end),'scenes rendering')
+print(round(end_end-start),'full time')
 
     
