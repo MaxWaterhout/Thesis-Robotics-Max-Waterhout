@@ -10,7 +10,7 @@ start = time.time()
 
 parser = argparse.ArgumentParser()
 parser.add_argument('bop_parent_path', help="Path to the bop datasets parent directory")
-parser.add_argument('cc_textures_path', default="datasets/cctextures", help="Path to downloaded cc textures")
+parser.add_argument('cc_textures_path', default="datasets/cc_textures", help="Path to downloaded cc textures")
 parser.add_argument('output_dir', help="Path to where the final files will be saved ")
 parser.add_argument('--num_scenes', type=int, default=2000, help="How many scenes with 25 images each to generate")
 args = parser.parse_args()
@@ -52,7 +52,9 @@ lm_dist_bop_objs = bproc.loader.load_bop_objs(bop_dataset_path = os.path.join(ar
 # load BOP datset intrinsics
 bproc.loader.load_bop_intrinsics(bop_dataset_path = os.path.join(args.bop_parent_path, 'lm'))
 
-textures_dir = "/home/max/Documents/blenderproc/datasets/models/chess/textures"
+textures_dir = os.path.join(current_dir, "datasets/models/chess/textures")
+
+#textures_dir = "/home/max/Documents/blenderproc/datasets/models/chess/textures"
 textures_objects_list = os.listdir(textures_dir)
 
 # set shading and hide objects
@@ -107,7 +109,7 @@ def set_materials(obj):
 
 end = time.time()
 for i in range(args.num_scenes):
-
+    
     # Sample bop objects for a scene
     #sampled_target_bop_objs = list(np.random.choice(target_bop_objs, size=3))
     #sampled_target_bop_objs = list(np.random.choice(target_bop_objs, size=15, replace=True))
@@ -174,7 +176,7 @@ for i in range(args.num_scenes):
         # Sample location
         location = bproc.sampler.shell(center = [0, 0, 0],
                                 radius_min = 0.2,
-                                radius_max = 1.2,
+                                radius_max = 0.9,
                                 elevation_min = 5,
                                 elevation_max = 89)
         # Determine point of interest in scene as the object closest to the mean of a subset of objects
@@ -201,7 +203,8 @@ for i in range(args.num_scenes):
                            depths = data["depth"],
                            colors = data["colors"], 
                            color_file_format = "JPEG",
-                           ignore_dist_thres = 10
+                           ignore_dist_thres = 10,
+                           frames_per_chunk=29999
                            )
     
     for obj in (sampled_target_bop_objs + sampled_distractor_bop_objs):      

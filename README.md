@@ -69,5 +69,10 @@ python debug.py --annotations --draw_2d-bboxes linemod /home/max/Documents/Linem
 python debug.py --annotations --draw_2d-bboxes linemod /home/max/Documents/GitHub/thesis/output/bop_data/chess/ --object-id 1
 python train.py --phi 0 --lr 0.001 --epochs 3 --steps 3 --gpu 0 --weights /home/max/Documents/EfficientPose/weights/object_1/phi_0_linemod_best_ADD.h5 linemod /home/max/Documents/Linemod_preprocessed --object-id 1  
 python train.py --phi 0  --lr 0.0001 --epochs 100 --steps 100 --no-snapshots --gpu 0 --weights /home/max/Documents/EfficientPose/weights/efficientdet-d0.h5 linemod /home/max/Documents/GitHub/thesis/output/bop_data/chess/ --object-id 1 --no-6dof-augmentation --tensorboard-dir "home/max/Documents/EfficientPose/logs/"
+python train.py --phi 0  --lr 0.0001 --epochs 500 --steps 1790 --gpu 0 --weights /home/max/Documents/EfficientPose/weights/efficientdet-d0.h5 linemod /home/max/Documents/bop_data/chess/ --object-id 1
+
 python debug.py --annotations --draw_2d-bboxes linemod /home/max/Documents/GitHub/thesis/output/bop_data/chess/ --object-id 1 
+python debug.py --annotations --draw_2d-bboxes linemod /home/max/Documents/bop_data/chess/ --object-id 1 
+
 use cuda10.0
+python interference.py

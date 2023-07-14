@@ -1,0 +1,31 @@
+scp -r ~/Documents/GitHub/thesis/output/bop_data/chess/02 max@145.94.60.31:~/Documents/bop_data/chess/data
+ls | wc -l
+du -sh 
+ssh max@145.94.60.31
+scp max@145.94.60.31:~/Documents/EfficientPose/checkpoints/15_06_2023_10_21_59/object_2/phi_0_linemod_best_ADD-S.h5 /home/max/Documents
+scp /home/max/Documents/gt.yml max@145.94.60.31:~/Documents/bop_data/chess/data/02/
+
+watch -n 10 'python train.py --phi 0  --lr 0.0001 --epochs 500 --steps 16*100 --gpu 0 --batch-size 16 --weights /home/max/Documents/EfficientPose/weights/efficientdet-d0.h5 linemod /home/max/Documents/bop_data/chess/ --object-id 1' > output.txt
+
+nohup watch -n 10 'python train.py --phi 0 --lr 0.0001 --epochs 500 --steps 1600 --gpu 1 --batch-size 16 --weights /home/max/Documents/EfficientPose/checkpoints/15_06_2023_13_19_56/object_1/phi_0_linemod_best_ADD-S.h5 linemod /home/max/Documents/bop_data/chess/ --object-id 1' >> output.txt &
+tail -1000 nohup.out 
+
+scp max@192.168.0.101:~/Documents/EfficientPose/checkpoints/15_06_2023_14_38_02/object_1/phi_0_linemod_best_ADD-S.h5 /home/max/Documents
+nohup python train.py --phi 0 --lr 0.001 --epochs 500 --steps 1600 --gpu 1 --batch-size 16 --weights /home/max/Documents/EfficientPose/checkpoints/17_06_2023_14_38_02/object_1/phi_0_linemod_best_ADD-S.h5 linemod /home/max/Documents/bop_data/chess/ --object-id 1 &
+python train.py --phi 0 --lr 0.0001 --epochs 10 --steps 50 --no-6dof-augmentation --gpu 0 --batch-size 1 --weights /home/max/Documents/GitHub/thesis/checkpoints/1st/phi_0_linemod_best_ADD-S.h5 linemod /home/max/Documents/GitHub/thesis/output/bop_data/chess/ --object-id 1
+python train.py --phi 0 --lr 0.0001 --epochs 100 --steps 50 --no-snapshots --no-6dof-augmentation --gpu 0 --batch-size 1 --weights /home/max/Documents/GitHub/thesis/checkpoints/1st/phi_0_linemod_best_ADD-S.h5 linemod /home/max/Documents/GitHub/thesis/output/bop_data/chess/ --object-id 1
+nohup python train.py --phi 0 --lr 0.001 --epochs 500 --steps 1600 --gpu 0 --batch-size 16 --weights /home/max/Documents/EfficientPose/checkpoints/19_06_2023_17_53_10/object_1/phi_0_linemod_best_ADD-S.h5 linemod /home/max/Documents/bop_data/chess/ --object-id 1 &
+grep -C 10 "saving" nohup.out
+grep -C 20 --text "saving" output.log
+grep --text "MixedAveragePointDistanceMean_in_mm" output.log
+
+conda run -n zed_env python inference_zed.py & conda run -n EfficientPose python inference_predicter.py
+
+count all files: ls -l | grep "^-" | wc -l
+Size of folder: du -sh /path
+count the lines of txt file: wc -l /...txt
+open jpg file: xdg-open 000000_000000.png
+
+nohup python train.py --phi 0 --lr 0.0001 --epochs 500 --steps 3000 --gpu 0 --batch-size 16 --weights /home/max/Documents/EfficientPose/checkpoints/10_07_2023_16_35_39/object_1/phi_0_linemod_best_ADD-S.h5 linemod /home/max/Documents/bop_data_3/chess/ --object-id 1 > phi_0_3.log &
+
+
