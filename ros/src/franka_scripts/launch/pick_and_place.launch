@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<launch>
+  
+  <include file="$(find panda_moveit_config)/launch/demo.launch" />
+  <node name="launch" pkg="franka_scripts" type="launch_python_files.sh"  />
+<include file="$(find yolov5_service)/launch/yolo_prediction.launch">
+  <arg name="use_rviz" value="false" />
+</include>
+
+</launch>
+

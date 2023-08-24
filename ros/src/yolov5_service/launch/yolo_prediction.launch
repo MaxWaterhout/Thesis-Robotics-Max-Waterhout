@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<launch>
+<arg name="use_rviz" default="true" />
+
+<include file="$(find zed_wrapper)/launch/zed2.launch"/>
+<node name="foo" pkg="yolov5_service" type="launch_python_files.sh"  />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find yolov5_service)/rviz/config_file.rviz" if="$(arg use_rviz)"/>
+
+</launch>
+

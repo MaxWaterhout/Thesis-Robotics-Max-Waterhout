@@ -1,0 +1,10 @@
+# Goal
+---
+# result
+bool success
+float64[] rotations
+float64[] translations
+string name
+---
+# feedback
+bool object_detection_succeed

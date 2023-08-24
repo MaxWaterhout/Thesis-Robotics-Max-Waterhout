@@ -1,0 +1,10 @@
+# Goal
+geometry_msgs/PoseStamped object_pose
+
+---
+# Result
+float32 progress
+
+---
+# Feedback
+bool success

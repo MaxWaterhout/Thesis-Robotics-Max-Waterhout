@@ -28,5 +28,17 @@ open jpg file: xdg-open 000000_000000.png
 above and under reading: grep -C 20 --text "ADD-S" phi_0_4.log
 tar -cvf <tarfile.tar> <file1>
 
-conda deactivate && source /home/max/env38/bin/activate && source devel/setup.bash
+conda deactivate
+source /home/max/env38/bin/activate
+source devel/setup.bash
 
+roslaunch zed_wrapper zed2.launch
+python service_yolo.py
+python client_yolo.py
+python predict_service.py 
+rostopic pub --once /yolo_prediction_trigger std_msgs/Empty "{}"
+
+python predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/rook/phi_0_linemod_best_ADD-S.h5" --object "rook"
+
+172.16.0.2
+roslaunch panda_moveit_config franka_control.launch robot_ip:=172.16.0.2
