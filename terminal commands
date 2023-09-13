@@ -30,7 +30,7 @@ tar -cvf <tarfile.tar> <file1>
 
 conda deactivate
 source /home/max/env38/bin/activate
-source devel/setup.bash
+source devel/setup.sh
 
 roslaunch zed_wrapper zed2.launch
 python service_yolo.py
