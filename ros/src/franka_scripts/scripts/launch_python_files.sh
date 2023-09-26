@@ -1,3 +1,2 @@
 #!/bin/bash
-python /home/max/Documents/ros_workspaces/zed_ws/src/franka_scripts/scripts/start.py &
-
+gnome-terminal --tab -- python /home/max/Documents/ros_workspaces/zed_ws/src/franka_scripts/scripts/action_client_arm.py --real-robot

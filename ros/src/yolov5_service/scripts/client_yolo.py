@@ -22,11 +22,13 @@ class yolo_client:
         self.image_data = None
         self.K_matrix = None
         self.depth_data = None
-        
+        self.yolo_score = None
         #self.prediction_service = rospy.Service('chess_prediction', predictionImage, self.handle_prediction_request)
         self.camera_sub = rospy.Subscriber("/zed2/zed_node/left/camera_info",CameraInfo,self.camera_callback )
         self.image_sub = rospy.Subscriber("/zed2/zed_node/left/image_rect_color", Image, self.image_callback)
         self.depth_sub = rospy.Subscriber("/zed2/zed_node/depth/depth_registered", Image, self.depth_callback)
+        rospy.wait_for_service("predictions_horse")
+        rospy.wait_for_service("prediction_yolo")
 
         self.trigger_sub = rospy.Subscriber("yolo_prediction_trigger", Empty, self.trigger_callback)
 
@@ -64,6 +66,9 @@ class yolo_client:
             self.result.success = True  # Set success to True
             self.result.rotations = response.rotations
             self.result.translations = response.translations
+            self.result.boxes = response.boxes
+            self.result.scores = response.scores
+            self.result.yolo_score = self.yolo_score
             self.result.name = name
             self.action_server.set_succeeded(self.result)
         else:
@@ -71,7 +76,6 @@ class yolo_client:
             self.action_server.set_aborted()
 
     def handle_prediction_request(self,action=False):
-        rospy.wait_for_service("prediction_yolo")  # Wait for the service to become available
         try:
             prediction_service = rospy.ServiceProxy("prediction_yolo", InputYoloPrediction)
             # Create a request object
@@ -86,6 +90,8 @@ class yolo_client:
                 if action:
                     self.action_server.publish_feedback(self.feedback)
                 name = response.name.data
+                rospy.loginfo(f"Predicted {name} with yolo with {response.score} confidence, now handling 6D pose")
+                self.yolo_score = response.score
                 response = self.handle_6D_prediction_request(response.name.data)
             else:
                 self.feedback.object_detection_succeed = False

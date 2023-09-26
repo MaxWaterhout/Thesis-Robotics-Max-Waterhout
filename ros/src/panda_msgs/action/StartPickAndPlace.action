@@ -1,10 +1,14 @@
 # Goal
-geometry_msgs/PoseStamped object_pose
-
+float64[] rotations
+float64[] translations
+string name
 ---
 # Result
-float32 progress
+bool success
 
 ---
 # Feedback
-bool success
+bool pick_planning_success
+bool picking_success
+bool place_planning_success
+bool placing_success

@@ -38,7 +38,11 @@ python client_yolo.py
 python predict_service.py 
 rostopic pub --once /yolo_prediction_trigger std_msgs/Empty "{}"
 
-python predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/rook/phi_0_linemod_best_ADD-S.h5" --object "rook"
+python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/queen/phi_0_linemod_best_ADD-S.h5" --object "queen"
+python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/rook/phi_0_linemod_best_ADD-S.h5" --object "rook"
+python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/king/phi_0_linemod_best_ADD-S.h5" --object "king"
+python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/bishop/phi_0_linemod_best_ADD-S.h5" --object "bishop"
+python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/pawn/phi_0_linemod_best_ADD-S.h5" --object "pawn"
 
 172.16.0.2
 roslaunch panda_moveit_config franka_control.launch robot_ip:=172.16.0.2

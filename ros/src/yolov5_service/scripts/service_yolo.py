@@ -50,7 +50,7 @@ class service_yolo:
 
     
         end = time.time()
-        rospy.loginfo(f'Sending back request in {end-start} seconds')
+        rospy.loginfo(f'Sending back request in {end-start} seconds, result is: {response.name}')
 
         return response
 

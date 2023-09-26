@@ -4,6 +4,9 @@
 bool success
 float64[] rotations
 float64[] translations
+float64[] boxes
+float64[] scores
+float64 yolo_score
 string name
 ---
 # feedback

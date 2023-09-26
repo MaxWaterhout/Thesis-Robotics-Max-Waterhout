@@ -1,11 +1,36 @@
 <?xml version="1.0" ?>
 <launch>
-  
-  <include file="$(find panda_moveit_config)/launch/demo.launch" />
-  <node name="launch" pkg="franka_scripts" type="launch_python_files.sh"  />
+<arg name="real_robot" default="false" />
+<arg name="robot" default="fr3" />
+<arg name="arm_id" default="fr3" />
+
+<group if="$(arg real_robot)">
+      <include file="$(find panda_moveit_config)/launch/franka_control.launch" >
+        <arg name="robot_ip" value="192.168.0.200" />
+        <arg name="load_gripper" value="true" />
+        <arg name="real_robot" value="false" />
+      </include>
+      <node name="launch" pkg="franka_scripts" type="launch_python_files.sh"  /> 
+</group>
+
+<group unless="$(arg real_robot)">
+  <include file="$(find panda_moveit_config)/launch/demo.launch" >
+        <arg name="robot_ip" value="192.168.0.200" />
+        <arg name="robot" value="fr3" />
+        <arg name="real_robot" value="false" />
+      </include>
+
+    <node name="launch" pkg="franka_scripts" type="launch_python_files_2.sh"  /> 
+
+</group>
+
 <include file="$(find yolov5_service)/launch/yolo_prediction.launch">
   <arg name="use_rviz" value="false" />
 </include>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="camera_to_world" args="0 0 0 0 0 0 world map" />
+  <node pkg="franka_scripts" type="add_tf_cam.py" name="add_tf_cam_node" output="screen">  </node>
+
 
 </launch>
 

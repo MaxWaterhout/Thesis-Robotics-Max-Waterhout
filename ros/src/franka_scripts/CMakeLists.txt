@@ -111,9 +111,16 @@ catkin_package(
 )
 
 catkin_install_python(PROGRAMS 
-    scripts/action_server_arm.py
+    scripts/action_client_arm.py
     scripts/start.py
+    scripts/test.py
     scripts/move_arm_functions.py
+    scripts/add_tf_cam.py
+    scripts/homing_gripper.py
+    scripts/grasp_gripper.py
+    scripts/test_pc.py
+    scripts/test_camerainfo.py
+
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
