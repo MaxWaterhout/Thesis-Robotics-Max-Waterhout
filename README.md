@@ -1,3 +1,6 @@
+# This is the thesis github repo of Max Waterhout
+<!--
+
 # Creating synthetic data for 6D pose estimation
 ## Prerequisites
 Before running the code, make sure you have the following prerequisites installed:
@@ -50,3 +53,4 @@ python bop_toolkit/scripts/calc_gt_info.py
 
 
 3: Create models info from the .ply models with: python bop_toolkit/scripts/calc_model_info.py output/bop_data . change datasets_params.py in scripts/bop_toolkit_lib and add models 
+-->
