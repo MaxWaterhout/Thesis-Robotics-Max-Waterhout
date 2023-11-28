@@ -4,3 +4,11 @@ datasets/textures
 old
 bop_toolkit
 output/bop_data
+weights/Logs
+ros/validation_ws/src/libfranka
+ros/validation_ws/src/franka_ros
+ros/validation_ws/src/charuco_detector
+ros/validation_ws/src/zed-ros-wrapper
+ros/picking_ws/src/franka_ros
+ros/picking_ws/src/panda_moveit_config
+ros/picking_ws/src/zed-ros-wrapper

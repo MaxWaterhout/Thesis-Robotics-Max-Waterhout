@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<launch>
+<include file="$(find zed_wrapper)/launch/zed2.launch"/>
+<node name="foo" pkg="pose_pkg" type="launch_python_files.sh"  />
+<include file="$(find charuco_detector)/launch/charuco_detector.launch"/>
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find pose_pkg)/rviz/rviz_config.rviz" />
+
+</launch>
+

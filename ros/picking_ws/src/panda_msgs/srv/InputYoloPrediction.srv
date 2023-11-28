@@ -1,0 +1,5 @@
+sensor_msgs/Image predicted_image
+---
+sensor_msgs/Image predicted_image
+std_msgs/String name
+float64 score

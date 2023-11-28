@@ -38,6 +38,9 @@ python client_yolo.py
 python predict_service.py 
 rostopic pub --once /yolo_prediction_trigger std_msgs/Empty "{}"
 
+prime-run roslaunch franka_scripts pick_and_place.launch robot_ip:=192.168.0.200 real_robot:=true robot:=fr3 use_rviz:=False
+
+python predict_service.py 
 python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/queen/phi_0_linemod_best_ADD-S.h5" --object "queen"
 python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/rook/phi_0_linemod_best_ADD-S.h5" --object "rook"
 python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/king/phi_0_linemod_best_ADD-S.h5" --object "king"
@@ -45,4 +48,11 @@ python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Docume
 python src/pose_estimator/scripts/predict_service.py --weights "/home/max/Documents/GitHub/thesis/weights/pawn/phi_0_linemod_best_ADD-S.h5" --object "pawn"
 
 172.16.0.2
-roslaunch panda_moveit_config franka_control.launch robot_ip:=172.16.0.2
+roslaunch panda_moveit_config franka_control.launch robot_ip:=192.168.0.200
+source /home/max/Documents/venv38_zed/bin/activate
+rqt_image_view /6D_prediction_visual
+rqt_image_view /zed2/zed_node/left/image_rect_color
+prime-run rviz --display-config src/franka_scripts/rviz/rviz_config.rviz export OGRE_RTT_MODE=Copy
+prime-run rviz --display-config src/pose_pkg/rviz/rviz_config.rviz export OGRE_RTT_MODE=Copy
+rostopic pub /activation_topic std_msgs/Empty "{}" --once
+python src/dataset_creator_pkg/scripts/image_creator.py --a1 "horse" --a2 "queen" --a3 "bishop" --b1 "rook" --b2 "pawn" --b3 "king"

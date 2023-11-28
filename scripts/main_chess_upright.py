@@ -109,7 +109,7 @@ def set_materials(obj):
 
 end = time.time()
 for i in range(args.num_scenes):
-    
+    print(i,' Of scene ', args.num_scenes)
     # Sample bop objects for a scene
     #sampled_target_bop_objs = list(np.random.choice(target_bop_objs, size=3))
     #sampled_target_bop_objs = list(np.random.choice(target_bop_objs, size=15, replace=True))
@@ -204,7 +204,7 @@ for i in range(args.num_scenes):
                            colors = data["colors"], 
                            color_file_format = "JPEG",
                            ignore_dist_thres = 10,
-                           frames_per_chunk=29999
+                           frames_per_chunk=69999
                            )
     
     for obj in (sampled_target_bop_objs + sampled_distractor_bop_objs):      

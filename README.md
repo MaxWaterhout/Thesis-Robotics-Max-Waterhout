@@ -50,29 +50,3 @@ python bop_toolkit/scripts/calc_gt_info.py
 
 
 3: Create models info from the .ply models with: python bop_toolkit/scripts/calc_model_info.py output/bop_data . change datasets_params.py in scripts/bop_toolkit_lib and add models 
-
-for debug: python debug.py --phi 0 --annotations linemod /home/max/Documents/blenderproc/output/bop_data/lm/train/data/ --object-id 1
-
-blenderproc at: /home/max/anaconda3/lib/python3.9/site-packages/blenderproc/python/utility
-Intrinsics left camera = 
-fx = 1069.86
-fy = 1069.81
-cx = 929.96
-cy = 540.947
-k1 = -0.0458
-k2 = 0.0162
-p1 = -0.0001
-p2 = -0.0009
-k3 = -0.0068
-
-python debug.py --annotations --draw_2d-bboxes linemod /home/max/Documents/Linemod_preprocessed/ --object-id 8
-python debug.py --annotations --draw_2d-bboxes linemod /home/max/Documents/GitHub/thesis/output/bop_data/chess/ --object-id 1
-python train.py --phi 0 --lr 0.001 --epochs 3 --steps 3 --gpu 0 --weights /home/max/Documents/EfficientPose/weights/object_1/phi_0_linemod_best_ADD.h5 linemod /home/max/Documents/Linemod_preprocessed --object-id 1  
-python train.py --phi 0  --lr 0.0001 --epochs 100 --steps 100  --gpu 0 --weights /home/max/Documents/EfficientPose/weights/efficientdet-d0.h5 linemod /home/max/Documents/GitHub/thesis/output/bop_data/chess/ --object-id 1  
-python train.py --phi 0  --lr 0.0001 --epochs 100 --steps 64 --gpu 1 --batch-size 16 --weights /home/max/Documents/EfficientPose/weights/efficientdet-d4.h5 linemod /home/max/Documents/bop_data/chess/ --object-id 1
-
-python debug.py --annotations --draw_2d-bboxes linemod /home/max/Documents/GitHub/thesis/output/bop_data/chess/ --object-id 1 
-python debug.py --annotations --draw_2d-bboxes linemod /home/max/Documents/bop_data/chess/ --object-id 1 
-
-use cuda10.0
-python interference.py

@@ -1,0 +1,705 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /MotionPlanning1/Planning Request1
+        - /TF1
+        - /TF1/Frames1
+        - /Image2
+        - /pose estimation1
+        - /pose estimation icp1
+        - /filtered points icp1
+      Splitter Ratio: 0.4992784857749939
+    Tree Height: 356
+  - Class: rviz/Help
+    Name: Help
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Acceleration_Scaling_Factor: 0.1
+      Class: moveit_rviz_plugin/MotionPlanning
+      Enabled: true
+      Move Group Namespace: ""
+      MoveIt_Allow_Approximate_IK: false
+      MoveIt_Allow_External_Program: false
+      MoveIt_Allow_Replanning: false
+      MoveIt_Allow_Sensor_Positioning: false
+      MoveIt_Planning_Attempts: 10
+      MoveIt_Planning_Time: 5
+      MoveIt_Use_Cartesian_Path: false
+      MoveIt_Use_Constraint_Aware_IK: false
+      MoveIt_Workspace:
+        Center:
+          X: 0
+          Y: 0
+          Z: 0
+        Size:
+          X: 2
+          Y: 2
+          Z: 2
+      Name: MotionPlanning
+      Planned Path:
+        Color Enabled: false
+        Interrupt Display: false
+        Links:
+          All Links Enabled: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Link Tree Style: Links in Alphabetic Order
+          fr3_hand:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_hand_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_hand_tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          fr3_leftfinger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link0_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link1_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link2_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link3_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link4:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link4_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link5:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link5_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link6:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link6_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link7:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link7_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link8:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          fr3_rightfinger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+        Loop Animation: true
+        Robot Alpha: 0.5
+        Robot Color: 150; 50; 150
+        Show Robot Collision: false
+        Show Robot Visual: true
+        Show Trail: false
+        State Display Time: 0.05 s
+        Trail Step Size: 1
+        Trajectory Topic: move_group/display_planned_path
+        Use Sim Time: false
+      Planning Metrics:
+        Payload: 1
+        Show Joint Torques: false
+        Show Manipulability: false
+        Show Manipulability Index: false
+        Show Weight Limit: false
+        TextHeight: 0.07999999821186066
+      Planning Request:
+        Colliding Link Color: 255; 0; 0
+        Goal State Alpha: 1
+        Goal State Color: 250; 128; 0
+        Interactive Marker Size: 0
+        Joint Violation Color: 255; 0; 255
+        Planning Group: fr3_arm
+        Query Goal State: false
+        Query Start State: false
+        Show Workspace: false
+        Start State Alpha: 1
+        Start State Color: 0; 255; 0
+      Planning Scene Topic: move_group/monitored_planning_scene
+      Robot Description: robot_description
+      Scene Geometry:
+        Scene Alpha: 1
+        Scene Color: 50; 230; 50
+        Scene Display Time: 0.009999999776482582
+        Show Scene Geometry: true
+        Voxel Coloring: Z-Axis
+        Voxel Rendering: Occupied Voxels
+      Scene Robot:
+        Attached Body Color: 150; 50; 150
+        Links:
+          All Links Enabled: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Link Tree Style: Links in Alphabetic Order
+          fr3_hand:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_hand_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_hand_tcp:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          fr3_leftfinger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link0_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link1_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link2_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link3_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link4:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link4_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link5:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link5_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link6:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link6_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link7:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link7_sc:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fr3_link8:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          fr3_rightfinger:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+        Robot Alpha: 0.5
+        Show Robot Collision: false
+        Show Robot Visual: true
+      Value: true
+      Velocity_Scaling_Factor: 0.1
+    - Class: rviz/TF
+      Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 15000
+      Frames:
+        All Enabled: false
+        CamLeft:
+          Value: false
+        base_link:
+          Value: false
+        chess_piece:
+          Value: false
+        chess_piece_icp:
+          Value: false
+        fr3_EE:
+          Value: false
+        fr3_K:
+          Value: false
+        fr3_NE:
+          Value: false
+        fr3_hand:
+          Value: false
+        fr3_hand_sc:
+          Value: false
+        fr3_hand_tcp:
+          Value: false
+        fr3_leftfinger:
+          Value: false
+        fr3_link0:
+          Value: false
+        fr3_link0_sc:
+          Value: false
+        fr3_link1:
+          Value: false
+        fr3_link1_sc:
+          Value: false
+        fr3_link2:
+          Value: false
+        fr3_link2_sc:
+          Value: false
+        fr3_link3:
+          Value: false
+        fr3_link3_sc:
+          Value: false
+        fr3_link4:
+          Value: false
+        fr3_link4_sc:
+          Value: false
+        fr3_link5:
+          Value: false
+        fr3_link5_sc:
+          Value: false
+        fr3_link6:
+          Value: false
+        fr3_link6_sc:
+          Value: false
+        fr3_link7:
+          Value: false
+        fr3_link7_sc:
+          Value: false
+        fr3_link8:
+          Value: false
+        fr3_rightfinger:
+          Value: false
+        map:
+          Value: false
+        odom:
+          Value: false
+        world:
+          Value: true
+        zed2_baro_link:
+          Value: false
+        zed2_base_link:
+          Value: false
+        zed2_camera_center:
+          Value: false
+        zed2_imu_link:
+          Value: false
+        zed2_left_camera_frame:
+          Value: false
+        zed2_left_camera_optical_frame:
+          Value: false
+        zed2_mag_link:
+          Value: false
+        zed2_right_camera_frame:
+          Value: false
+        zed2_right_camera_optical_frame:
+          Value: false
+        zed2_temp_left_link:
+          Value: false
+        zed2_temp_right_link:
+          Value: false
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        world:
+          fr3_link0:
+            fr3_link0_sc:
+              {}
+            fr3_link1:
+              fr3_link1_sc:
+                {}
+              fr3_link2:
+                fr3_link2_sc:
+                  {}
+                fr3_link3:
+                  fr3_link3_sc:
+                    {}
+                  fr3_link4:
+                    fr3_link4_sc:
+                      {}
+                    fr3_link5:
+                      fr3_link5_sc:
+                        {}
+                      fr3_link6:
+                        fr3_link6_sc:
+                          {}
+                        fr3_link7:
+                          fr3_link7_sc:
+                            {}
+                          fr3_link8:
+                            fr3_NE:
+                              fr3_EE:
+                                fr3_K:
+                                  {}
+                            fr3_hand:
+                              CamLeft:
+                                chess_piece:
+                                  {}
+                                chess_piece_icp:
+                                  {}
+                              fr3_hand_sc:
+                                {}
+                              fr3_hand_tcp:
+                                {}
+                              fr3_leftfinger:
+                                {}
+                              fr3_rightfinger:
+                                {}
+          map:
+            odom:
+              base_link:
+                zed2_base_link:
+                  zed2_camera_center:
+                    zed2_baro_link:
+                      {}
+                    zed2_left_camera_frame:
+                      zed2_imu_link:
+                        {}
+                      zed2_left_camera_optical_frame:
+                        {}
+                      zed2_temp_left_link:
+                        {}
+                    zed2_mag_link:
+                      {}
+                    zed2_right_camera_frame:
+                      zed2_right_camera_optical_frame:
+                        {}
+                      zed2_temp_right_link:
+                        {}
+      Update Interval: 0
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /6D_prediction_visual
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /zed2/zed_node/left/image_rect_color
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: ""
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: pose estimation
+      Position Transformer: ""
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 1
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic: /modified_pointcloud_topic
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: x
+      Class: rviz/PointCloud2
+      Color: 0; 0; 0
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: pose estimation icp
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 1
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic: /modified_pointcloud_topic_icp
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 0.5953031778335571
+        Min Value: 0.36698347330093384
+        Value: true
+      Axis: X
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: filtered points icp
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 1
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic: /Pointcloud_Publisher_depth_map_icp
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: "depth map "
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 1
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic: /Pointcloud_Publisher_depth_map
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: fr3_link0
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/Measure
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 0.23363250494003296
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.75
+      Focal Point:
+        X: 0.48357823491096497
+        Y: -0.04140830039978027
+        Z: 0.2501286268234253
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.2850060760974884
+      Target Frame: fr3_link0
+      Yaw: 4.744807720184326
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1043
+  Help:
+    collapsed: false
+  Hide Left Dock: false
+  Hide Right Dock: true
+  Image:
+    collapsed: false
+  MotionPlanning:
+    collapsed: false
+  MotionPlanning - Trajectory Slider:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd0000000100000000000002b7000003b9fc020000000afb000000100044006900730070006c006100790073010000003d000001a1000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a00560069006500770073000000010c000000a4000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006700000001ab000001880000017d00fffffffb0000000a0049006d00610067006501000001e4000001090000001600fffffffb0000000a0049006d00610067006501000002f3000001030000001600fffffffb0000002600480061006e0064004500790065002000430061006c006900620072006100740069006f006e0000000215000001e10000000000000000000004c3000003b900000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Views:
+    collapsed: false
+  Width: 1920
+  X: 0
+  Y: 0

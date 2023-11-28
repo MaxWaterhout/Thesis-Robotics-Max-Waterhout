@@ -1,9 +1,0 @@
-Header header
-sensor_msgs/Image predicted_image
-float64[] rotations
-float64[] boxes
-float64[] scores
-float64[] translations
-sensor_msgs/Image depth_map
-
-
