@@ -37,3 +37,13 @@ Let's break down the arguments:
 - `--num_scenes=2`: Specifies the number of scenes to render, each with a different textured wall.
 
 Executing this command initiates the image generation process. It will render the specified number of scenes, applying the desired textures, and save the resulting images in the output folder.
+
+## Training the 6D Pose estimation model
+
+1. Read the paper "EfficientPose: An efficient, accurate and scalable end-to-end 6D multi object pose estimation approach" and clone its repo at:  https://github.com/ybkscht/EfficientPose
+2. Put the images in LineMod format. This way EfficientPose can be trained on them. 
+3. Follow the instructions on the EfficientPose GitHub page to train the models. 
+
+## Picking with a Franka Robot
+1. First get the robot to work: https://frankaemika.github.io/docs/overview.html
+2. `ROS/picking_ws` contains the ROS network for the picking pipeline. The whole pipeline is explained in the thesis itself. An example command for picking is: `roslaunch franka_scripts pick_and_place.launch robot_ip:=192.168.0.200 real_robot:=true robot:=fr3 use_rviz:=False`
