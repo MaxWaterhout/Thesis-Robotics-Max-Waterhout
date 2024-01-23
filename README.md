@@ -1,5 +1,5 @@
 # This is the thesis github repo of Max Waterhout
-
+This is the GitHub repo for the thesis of Max Waterhout for my master Robotics at the Technical University of Delft. The full thesis can be read at: https://repository.tudelft.nl/islandora/object/uuid%3A4506c969-220d-4257-ad5b-91853ea83ccb?collection=education
 # Creating synthetic data for 6D pose estimation
 ## Prerequisites
 Before running the code, make sure you have the following prerequisites installed:
